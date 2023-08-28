@@ -2,13 +2,13 @@
   "name": "my-vue3-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "eslint": "eslint src/**/*.{ts,tsx,vue}",
-    "pre-check": "tsc"
+    "pre-check": "tsc",
+    "commit": "git-cz"
   },
   "config": {
     "commitizen": {
