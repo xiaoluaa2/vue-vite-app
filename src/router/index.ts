@@ -1,7 +1,7 @@
 import { close, start } from '@/utils/nporgress'
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
-const Login = () => import('@/views/login/Login.vue')
-const Home = () => import('@/views/home/Home.vue')
+const Login = () => import('@/views/login/LoginIndex.vue')
+const Home = () => import('@/views/home/HomeIndex.vue')
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -36,7 +36,8 @@ const router = createRouter({
   routes,
 })
 // 验证token
-router.beforeEach((to, from, next) => {
+
+router.beforeEach((_to, _from, next) => {
   // if (
   //   to.path === '/login' ||
   //   to.path === '/register' ||
@@ -44,7 +45,7 @@ router.beforeEach((to, from, next) => {
   // )
   //   return next()
   // else {
-  //   let flag = window.localStorage.getItem('token')
+  //   const flag = window.localStorage.getItem('token')
   //   console.log(flag)
 
   //   if (!flag) {

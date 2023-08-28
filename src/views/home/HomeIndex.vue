@@ -1,4 +1,3 @@
-<!--  -->
 <template>
   <h3>home</h3>
   <el-button @click="$router.push('login')" type="primary">LOGIN</el-button>

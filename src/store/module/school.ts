@@ -1,8 +1,4 @@
 import { defineStore } from 'pinia'
-type SchoolList = {
-  school_name_text: string
-  school_id: number
-}
 //参数1：定义一个仓库的唯一id名，Pinia会将所有的容器挂载到根容器；参数2：选项对象
 const school = defineStore('school', {
   state: () => {

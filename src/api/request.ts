@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
-let router = useRouter()
+const router = useRouter()
 // 创建axios实例
 // 创建请求时可以用的配置选项
 const request = axios.create({
@@ -78,7 +78,7 @@ const errorHandle = (status: any, other: any) => {
 request.interceptors.response.use(
   // 响应包含以下信息data,status,statusText,headers,config
   (response) => {
-    if (response.data.hasOwnProperty('code') && response.data.code != 1) {
+    if (Object.prototype.hasOwnProperty.call(response.data, 'code')&& response.data.code != 1) {
       console.log(response)
       ElMessage({
         message: response.data.msg,
